@@ -17,14 +17,18 @@ int main(){
             cin>>r;
             cout<<"INPUT NUMBER OF SERIES: ";
             cin>>n;
-
+            
             for (int i=0; i<=n-1; i++){
-                cout<<(a*pow(r,i));
-                if(i<n){
+                double sumg,h;
+                h=(a*pow(r,i));
+                cout<<h;
+                sumg+=h;
+                if(i<n-1){
                     cout<<',';
                 }
+                else{cout<<"\nSUM IS: "<<sumg;}
             }
-        break;
+            break;
             
         case 'B':
             cout<<"INPUT FIRST TERM: ";
@@ -33,14 +37,18 @@ int main(){
             cin>>r;
             cout<<"INPUT NUMBER OF SERIES: ";
             cin>>n;
-    
+            
             for (int i=0; i<=n-1; i++){
-                cout<<(a*pow(r,i));
-                if(i<n){
+                double sumg,h;
+                h=(a*pow(r,i));
+                cout<<h;
+                sumg+=h;
+                if(i<n-1){
                     cout<<',';
                 }
+                else{cout<<"\nSUM IS: "<<sumg;}
             }
-        break;
+            break;
             
         case 'e':
             cout<<"INPUT DEGREE OF POLYNOMIAL: ";
@@ -90,3 +98,4 @@ int main(){
             
 }
 }
+
