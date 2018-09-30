@@ -1,0 +1,92 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+int main(){
+    int a, n, r, x;
+    double fact=1, j, k;
+    char y;
+    
+    cout<<"B - GEOMETRIC SERIES\nE - TAYLOR OF POLYNOMIAL DEGREE OF n"<<endl;
+    cin>>y;
+    switch (y) {
+        case 'b':
+            cout<<"INPUT FIRST TERM: ";
+            cin>>a;
+            cout<<"INPUT COMMON RATIO: ";
+            cin>>r;
+            cout<<"INPUT NUMBER OF SERIES: ";
+            cin>>n;
+
+            for (int i=0; i<=n-1; i++){
+                cout<<(a*pow(r,i));
+                if(i<n){
+                    cout<<',';
+                }
+            }
+        break;
+            
+        case 'B':
+            cout<<"INPUT FIRST TERM: ";
+            cin>>a;
+            cout<<"INPUT COMMON RATIO: ";
+            cin>>r;
+            cout<<"INPUT NUMBER OF SERIES: ";
+            cin>>n;
+    
+            for (int i=0; i<=n-1; i++){
+                cout<<(a*pow(r,i));
+                if(i<n){
+                    cout<<',';
+                }
+            }
+        break;
+            
+        case 'e':
+            cout<<"INPUT DEGREE OF POLYNOMIAL: ";
+            cin>>n;
+            cout<<"INPUT VALUE OF x: ";
+            cin>>x;
+            fact=1;
+            
+            if (n>0){
+                cout<<"1+";
+                for (int i=1; i<=n; i++){
+                    double h, sumd;
+                    j=pow(x,i);
+                    k=(fact*=i);
+                    h=(j/fact);
+                    cout<<h;
+                    sumd+=h;
+                    if (i<n){cout<<'+';}
+                    else{cout<<"\n"<<sumd+1;}
+                }
+            }
+            else{cout<<"INVALID DEGREE!";}
+        break;
+        
+        case 'E':
+            cout<<"INPUT DEGREE OF POLYNOMIAL: ";
+            cin>>n;
+            cout<<"INPUT VALUE OF x: ";
+            cin>>x;
+            fact=1;
+            
+            if (n>0){
+                cout<<"1+";
+                for (int i=1; i<=n; i++){
+                    double h, sumd;
+                    j=pow(x,i);
+                    k=(fact*=i);
+                    h=(j/fact);
+                    cout<<h;
+                    sumd+=h;
+                    if (i<n){cout<<'+';}
+                    else{cout<<"\n"<<sumd+1;}
+                }
+            }
+            else{cout<<"INVALID DEGREE!";}
+            break;
+            
+}
+}
